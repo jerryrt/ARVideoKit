@@ -25,13 +25,14 @@ import Photos
     /// A `PHLivePhoto` object that returns the Live Photo content from `PHLivePhotoPlus`.
     @objc public var livePhoto: PHLivePhoto?
     
-    @objc public override init() {
+//    @objc public override init() {
 //        super.init()
-    }
+//    }
     
     @objc public init(photo: PHLivePhoto) {
- //       super.init()
+//        super.init()
         livePhoto = photo
+        fatalError("init(photo:) feature removed, incompatibility with iOS 13")
     }
     
     @objc required public init?(coder aDecoder: NSCoder) {
