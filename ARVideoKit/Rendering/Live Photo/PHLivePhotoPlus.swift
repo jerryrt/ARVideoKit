@@ -26,11 +26,11 @@ import Photos
     @objc public var livePhoto: PHLivePhoto?
     
     @objc public override init() {
-        super.init()
+//        super.init()
     }
     
     @objc public init(photo: PHLivePhoto) {
-        super.init()
+ //       super.init()
         livePhoto = photo
     }
     
