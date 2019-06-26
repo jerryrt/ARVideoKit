@@ -11,9 +11,7 @@ import Metal
 import ARKit
 import Photos
 import PhotosUI
-#if canImport(RealityKit)
 import RealityKit
-#endif
 
 /**
  This class renders the `ARSCNView` or `ARSKView` content with the device's camera stream to generate a video 📹, photo 🌄, live photo 🎇 or GIF 🎆.

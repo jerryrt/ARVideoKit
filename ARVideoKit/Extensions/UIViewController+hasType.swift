@@ -8,9 +8,7 @@
 
 import UIKit
 import ARKit
-#if canImport(RealityKit)
 import RealityKit
-#endif
 
 @available(iOS 11.0, *)
 extension UIViewController {

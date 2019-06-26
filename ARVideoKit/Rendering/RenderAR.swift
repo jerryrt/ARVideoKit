@@ -8,9 +8,7 @@
 
 import Foundation
 import ARKit
-#if canImport(RealityKit)
 import RealityKit
-#endif
 
 @available(iOS 11.0, *)
 struct RenderAR {

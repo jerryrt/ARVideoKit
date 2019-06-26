@@ -8,9 +8,7 @@
 
 import UIKit
 import ARKit
-#if canImport(RealityKit)
 import RealityKit
-#endif
 /**
  A class that configures the Augmented Reality View orientations.
  
