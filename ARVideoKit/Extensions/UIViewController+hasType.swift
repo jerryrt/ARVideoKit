@@ -8,14 +8,23 @@
 
 import UIKit
 import ARKit
+#if canImport(RealityKit)
+import RealityKit
+#endif
 
 @available(iOS 11.0, *)
 extension UIViewController {
     var hasARView: Bool {
         let views = self.view.subviews
         for v in views {
-            if v is ARSCNView || v is ARSKView {
-                return true
+            if #available(iOS 13.0, *) {
+                if v is ARSCNView || v is ARSKView || v is RealityKit.ARView {
+                    return true
+                }
+            } else {
+                if v is ARSCNView || v is ARSKView  {
+                    return true
+                }
             }
         }
         return false
