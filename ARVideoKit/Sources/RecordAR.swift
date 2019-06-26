@@ -147,7 +147,6 @@ import RealityKit
     @objc override public init?(SceneKit: SCNView) {
         super.init(SceneKit: SceneKit)
         view = SceneKit
-        scnView = SCNView(frame: UIScreen.main.bounds)
         setup()
     }
     
