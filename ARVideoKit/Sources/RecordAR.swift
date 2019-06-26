@@ -151,7 +151,7 @@ import RealityKit
     }
     
     @available(iOS 13.0, *)
-    @objc override init?(RealityKit: RealityKit.ARView) {
+    @objc override public init?(RealityKit: RealityKit.ARView) {
         super.init(RealityKit: RealityKit)
         view = RealityKit
         setup()
