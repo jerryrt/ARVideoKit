@@ -440,7 +440,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuZ-iu-01E">
-                                <rect key="frame" x="174.5" y="723" width="65" height="65"/>
+                                <rect key="frame" x="80" y="723" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="Dry-Oq-0A1"/>
                                     <constraint firstAttribute="height" constant="65" id="xnG-qU-Hd6"/>
@@ -454,13 +454,30 @@
                                     <action selector="toggleRecord:" destination="Sut-aM-F8k" eventType="touchUpInside" id="hRM-N2-Lwm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYO-KD-l0h">
+                                <rect key="frame" x="269" y="723" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="XfN-cU-dpT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="h6F-EW-zfA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Screenshot">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureScreenshot:" destination="Sut-aM-F8k" eventType="touchUpInside" id="wKE-HQ-s27"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="tqL-gq-GOP" firstAttribute="trailing" secondItem="qYO-KD-l0h" secondAttribute="trailing" constant="80" id="1Zn-SV-Qax"/>
                             <constraint firstItem="tqL-gq-GOP" firstAttribute="bottom" secondItem="cuZ-iu-01E" secondAttribute="bottom" constant="20" id="6DY-uq-WYo"/>
+                            <constraint firstItem="cuZ-iu-01E" firstAttribute="leading" secondItem="tqL-gq-GOP" secondAttribute="leading" constant="80" id="88o-Lb-unv"/>
                             <constraint firstItem="tqL-gq-GOP" firstAttribute="top" secondItem="lpj-To-9o7" secondAttribute="top" constant="17" id="Awc-mL-Jlq"/>
+                            <constraint firstItem="tqL-gq-GOP" firstAttribute="bottom" secondItem="qYO-KD-l0h" secondAttribute="bottom" constant="20" id="FbE-Pd-rFj"/>
                             <constraint firstItem="oIy-xw-BxF" firstAttribute="top" secondItem="tqL-gq-GOP" secondAttribute="top" constant="20" id="Izy-BD-Bg4"/>
-                            <constraint firstItem="cuZ-iu-01E" firstAttribute="centerX" secondItem="tqL-gq-GOP" secondAttribute="centerX" id="WEd-QU-MPq"/>
                             <constraint firstItem="oIy-xw-BxF" firstAttribute="leading" secondItem="tqL-gq-GOP" secondAttribute="leading" constant="20" id="WPh-VR-5wf"/>
                             <constraint firstItem="lpj-To-9o7" firstAttribute="leading" secondItem="tqL-gq-GOP" secondAttribute="leading" id="ePx-ia-RPn"/>
                             <constraint firstItem="tqL-gq-GOP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oIy-xw-BxF" secondAttribute="trailing" symbolic="YES" id="fvG-0I-CRS"/>
@@ -470,6 +487,7 @@
                         <viewLayoutGuide key="safeArea" id="tqL-gq-GOP"/>
                     </view>
                     <connections>
+                        <outlet property="captureBtn" destination="qYO-KD-l0h" id="RiU-v8-cRH"/>
                         <outlet property="dismissBtn" destination="oIy-xw-BxF" id="ctt-UC-rKC"/>
                         <outlet property="recordBtn" destination="cuZ-iu-01E" id="JQq-Ij-cXO"/>
                         <outlet property="rkView" destination="lpj-To-9o7" id="BCk-Nx-97k"/>

@@ -18,7 +18,7 @@ class SKViewController: UIViewController, ARSKViewDelegate, RenderARDelegate, Re
     @IBOutlet var pauseBtn: UIButton!
     
     let recordingQueue = DispatchQueue(label: "recordingThread")
-    let caprturingQueue = DispatchQueue(label: "capturingThread", attributes: .concurrent)
+    let capturingQueue = DispatchQueue(label: "capturingThread", attributes: .concurrent)
     
     var recorder:RecordAR?
 
@@ -145,14 +145,14 @@ extension SKViewController {
                 self.recorder?.export(UIImage: image) { saved, status in
                     if saved {
                         // Inform user photo has exported successfully
-                        self.exportMessage(success: saved, status: status)
+                        DispatchQueue.main.sync {self.exportMessage(success: saved, status: status)}
                     }
                 }
             }
         }else if sender.tag == 1 {
             //Live Photo
             if recorder?.status == .readyToRecord {
-                caprturingQueue.async {
+                capturingQueue.async {
                     self.recorder?.livePhoto(export: true) { ready, photo, status, saved in
                         /*
                          if ready {
@@ -162,7 +162,7 @@ extension SKViewController {
                         
                         if saved {
                             // Inform user Live Photo has exported successfully
-                            self.exportMessage(success: saved, status: status)
+                            DispatchQueue.main.sync {self.exportMessage(success: saved, status: status)}
                         }
                     }
                 }
@@ -179,7 +179,7 @@ extension SKViewController {
                     
                     if saved {
                         // Inform user GIF image has exported successfully
-                        self.exportMessage(success: saved, status: status)
+                        DispatchQueue.main.sync {self.exportMessage(success: saved, status: status)}
                     }
                 }
             }

@@ -121,17 +121,14 @@ struct RenderAR {
             }
             guard let buffer = renderedFrame!.buffer else { return nil }
             return buffer
-        } else if #available(iOS 13.0, *), view is RealityKit.ARView {
+        } else if #available(iOS 13.0, *), let view = view as? RealityKit.ARView {
             guard let size = bufferSize else { return nil }
+            print("buffer size: \(size)")
             //UIScreen.main.bounds.size
             var renderedFrame: UIImage?
-            pixelsQueue.sync {
-                renderedFrame = renderEngine.snapshot(atTime: self.time, with: size, antialiasingMode: .none)
-            }
-            if let _ = renderedFrame {
-            } else {
-                renderedFrame = renderEngine.snapshot(atTime: time, with: size, antialiasingMode: .none)
-            }
+            
+            renderedFrame = view.imageViaViewDraw()
+            
             guard let buffer = renderedFrame!.buffer else { return nil }
             return buffer
         }

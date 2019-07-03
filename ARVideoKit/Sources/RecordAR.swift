@@ -154,7 +154,6 @@ import RealityKit
     @objc override public init?(RealityKit: RealityKit.ARView) {
         super.init(RealityKit: RealityKit)
         view = RealityKit
-        scnView = SCNView(frame: UIScreen.main.bounds)
         setup()
     }
 
@@ -279,23 +278,13 @@ import RealityKit
             gpuLoop.add(to: .main, forMode: .common)
             
             status = .readyToRecord
-        } else if #available(iOS 13.0, *), let view = view as? RealityKit.ARView {
+        } else if #available(iOS 13.0, *), let _ = view as? RealityKit.ARView {
             guard let mtlDevice = MTLCreateSystemDefaultDevice() else {
                 logAR.message("ERROR:- This device does not support Metal")
                 return
             }
-            let material = SCNMaterial()
-            material.diffuse.contents = view.scene
-            
-            let plane = SCNPlane(width: view.bounds.width, height: view.bounds.height)
-            let node = SCNNode(geometry: plane)
-            node.geometry?.firstMaterial = material
-            node.position = SCNVector3Make(0, 0, 0)
-            
-            scnView.scene?.rootNode.addChildNode(node)
-            
+            //NOT used in actual rendering, just a place holder.
             renderEngine = SCNRenderer(device: mtlDevice, options: nil)
-            renderEngine.scene = scnView.scene
             
             gpuLoop = CADisplayLink(target: WeakProxy(target: self),
                                     selector: #selector(renderFrame))

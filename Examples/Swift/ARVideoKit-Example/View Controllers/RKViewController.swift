@@ -61,12 +61,31 @@ class RKViewController : UIViewController, ARSessionDelegate, RenderARDelegate, 
         }
     }
     
+    @IBAction func captureScreenshot(_ sender: UIButton) {
+        //Photo
+        if recorder?.status == .readyToRecord {
+            let image = self.recorder?.photo()
+            self.recorder?.export(UIImage: image) { saved, status in
+                if saved {
+                    DispatchQueue.main.sync {
+                        self.exportMessage(success: saved, status: status)
+                    }
+                } else {
+                    print("failed to save screenshot: \(status)")
+                }
+            }
+        } else {
+            print("recorder status not ready: \(String(describing: recorder?.status))")
+        }
+    }
+    
     @IBOutlet var rkView: ARView!
     @IBOutlet var recordBtn: UIButton!
+    @IBOutlet var captureBtn: UIButton!
     @IBOutlet var dismissBtn: UIButton!
     
     let recordingQueue = DispatchQueue(label: "recordingThread", attributes: .concurrent)
-    let caprturingQueue = DispatchQueue(label: "capturingThread", attributes: .concurrent)
+    let capturingQueue = DispatchQueue(label: "capturingThread", attributes: .concurrent)
     
     var recorder:RecordAR?
     let configuration = ARWorldTrackingConfiguration()
@@ -118,7 +137,8 @@ class RKViewController : UIViewController, ARSessionDelegate, RenderARDelegate, 
         super.viewDidAppear(animated)
         
         // Run a body tracking configration.
-        rkView.session.run(configuration)
+        recorder?.onlyRenderWhileRecording = true
+        recorder?.prepare(configuration)
         
     }
     
@@ -128,8 +148,6 @@ class RKViewController : UIViewController, ARSessionDelegate, RenderARDelegate, 
         if recorder?.status == .recording {
             recorder?.stopAndExport()
         }
-        recorder?.onlyRenderWhileRecording = true
-        recorder?.prepare(configuration)
         
         // Switch off the orientation lock for UIViewControllers with AR Scenes
         recorder?.rest()
