@@ -19,7 +19,7 @@ import RealityKit
  * [Email](mailto:me@ahmedbekhit.com)
  */
 @available(iOS 11.0, *)
-@objc public class ARView: NSObject {
+@objc public class ARViewHelper: NSObject {
     private weak var parentVC: UIViewController?
     private var recentAngle = 0
     private var inputViewOrientation:[ARInputViewOrientation] = []

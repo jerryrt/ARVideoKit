@@ -12,10 +12,13 @@ class MainViewController: UIViewController {
 
     @IBOutlet var skBtn: UIButton!
     @IBOutlet var scnBtn: UIButton!
+    @IBOutlet var rkBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         skBtn.layer.cornerRadius = skBtn.bounds.height/2
         scnBtn.layer.cornerRadius = scnBtn.bounds.height/2
+        rkBtn.layer.cornerRadius = rkBtn.bounds.height/2
     }
 
     override func didReceiveMemoryWarning() {

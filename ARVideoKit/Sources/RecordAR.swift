@@ -23,7 +23,7 @@ import RealityKit
  * [Email](mailto:me@ahmedbekhit.com)
  */
 @available(iOS 11.0, *)
-@objc public class RecordAR: ARView {
+@objc public class RecordAR: ARViewHelper {
     //MARK: - Public objects to configure RecordAR
     /**
      An object that passes the AR recorder errors and status in the protocol methods.

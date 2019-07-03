@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFB41C1122CBA46F00F64BBB /* RKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB41C1022CBA46F00F64BBB /* RKViewController.swift */; };
 		FB2E368C1FAE2A510035B8D6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FB2E368B1FAE2A510035B8D6 /* LICENSE */; };
 		FB36BDB020086BBB00002808 /* ARVideoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB36BDAF20086BB000002808 /* ARVideoKit.framework */; };
 		FB36BDB120086BBB00002808 /* ARVideoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB36BDAF20086BB000002808 /* ARVideoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DFB41C1022CBA46F00F64BBB /* RKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKViewController.swift; sourceTree = "<group>"; };
 		FB2E368B1FAE2A510035B8D6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FB36BDAA20086BB000002808 /* ARVideoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ARVideoKit.xcodeproj; path = ../../ARVideoKit.xcodeproj; sourceTree = "<group>"; };
 		FB9B5D2D1FC49E3E005DDD60 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				FB9B5D2D1FC49E3E005DDD60 /* MainViewController.swift */,
 				FBE134BB1FAAD3DD00BEC469 /* SCNViewController.swift */,
 				FBDCC60C1FABFE6A00E3184D /* SKViewController.swift */,
+				DFB41C1022CBA46F00F64BBB /* RKViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE134BC1FAAD3DD00BEC469 /* SCNViewController.swift in Sources */,
+				DFB41C1122CBA46F00F64BBB /* RKViewController.swift in Sources */,
 				FBE134BA1FAAD3DD00BEC469 /* AppDelegate.swift in Sources */,
 				FBDCC60D1FABFE6A00E3184D /* SKViewController.swift in Sources */,
 				FBDCC5E81FABDFC600E3184D /* Scene.swift in Sources */,
@@ -425,12 +429,13 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = "ARVideoKit-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedbekhit.ARVideoKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -447,12 +452,13 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = "ARVideoKit-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedbekhit.ARVideoKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

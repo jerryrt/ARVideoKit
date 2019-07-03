@@ -26,7 +26,7 @@
 		FBD605081FA96B6B00EC9804 /* Generate+LivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD605031FA96B6B00EC9804 /* Generate+LivePhoto.swift */; };
 		FBD6050A1FA96B6B00EC9804 /* QuickTimeMov.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD605051FA96B6B00EC9804 /* QuickTimeMov.swift */; };
 		FBD6050B1FA96B6B00EC9804 /* PHLivePhotoPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD605061FA96B6B00EC9804 /* PHLivePhotoPlus.swift */; };
-		FBD605111FA96BA100EC9804 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6050D1FA96BA100EC9804 /* ARView.swift */; };
+		FBD605111FA96BA100EC9804 /* ARViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6050D1FA96BA100EC9804 /* ARViewHelper.swift */; };
 		FBD605121FA96BA100EC9804 /* RecordAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6050E1FA96BA100EC9804 /* RecordAR.swift */; };
 		FBD605131FA96BA100EC9804 /* WritAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6050F1FA96BA100EC9804 /* WritAR.swift */; };
 		FBD605141FA96BA100EC9804 /* ViewAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD605101FA96BA100EC9804 /* ViewAR.swift */; };
@@ -55,7 +55,7 @@
 		FBD605031FA96B6B00EC9804 /* Generate+LivePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Generate+LivePhoto.swift"; sourceTree = "<group>"; };
 		FBD605051FA96B6B00EC9804 /* QuickTimeMov.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickTimeMov.swift; sourceTree = "<group>"; };
 		FBD605061FA96B6B00EC9804 /* PHLivePhotoPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHLivePhotoPlus.swift; sourceTree = "<group>"; };
-		FBD6050D1FA96BA100EC9804 /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		FBD6050D1FA96BA100EC9804 /* ARViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewHelper.swift; sourceTree = "<group>"; };
 		FBD6050E1FA96BA100EC9804 /* RecordAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAR.swift; sourceTree = "<group>"; };
 		FBD6050F1FA96BA100EC9804 /* WritAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritAR.swift; sourceTree = "<group>"; };
 		FBD605101FA96BA100EC9804 /* ViewAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAR.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		FBD6050C1FA96B8F00EC9804 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FBD6050D1FA96BA100EC9804 /* ARView.swift */,
+				FBD6050D1FA96BA100EC9804 /* ARViewHelper.swift */,
 				FBD6050E1FA96BA100EC9804 /* RecordAR.swift */,
 				FBD605101FA96BA100EC9804 /* ViewAR.swift */,
 			);
@@ -300,7 +300,7 @@
 				FBD604FD1FA96B3E00EC9804 /* RenderARDelegate.swift in Sources */,
 				FBD605131FA96BA100EC9804 /* WritAR.swift in Sources */,
 				FBD604F51FA96B3300EC9804 /* UIImage+VideoBuffer.swift in Sources */,
-				FBD605111FA96BA100EC9804 /* ARView.swift in Sources */,
+				FBD605111FA96BA100EC9804 /* ARViewHelper.swift in Sources */,
 				FBD604F61FA96B3300EC9804 /* CGImage+Resize.swift in Sources */,
 				B466A8B82279E34C00BD7070 /* WeakProxy.swift in Sources */,
 				FBD604F91FA96B3300EC9804 /* UIViewController+hasType.swift in Sources */,
